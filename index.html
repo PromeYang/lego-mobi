@@ -34,18 +34,11 @@ $ git checkout gh-pages
 </code></pre>
 
 {% highlight html %}
-<div class="mod-tab" id="tab">
-    <div class="mod-tab__hd" data-js="nav">
-        <div class="mod-tab__hdItem act">01</div>
-        <div class="mod-tab__hdItem">02</div>
-        <div class="mod-tab__hdItem">03</div>
-    </div>
-    <div class="mod-tab__bd" data-js="content">
-        <div class="mod-tab__bdItem act">1</div>
-        <div class="mod-tab__bdItem">2</div>
-        <div class="mod-tab__bdItem">3</div>
-    </div>
-</div>
+<script>
+    seajs.use(['zepto','touch','module/lego.tab'], function() {
+        LEGO.tab('#tab');
+    });
+</script>
 {% endhighlight %}
 
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
