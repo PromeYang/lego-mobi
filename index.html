@@ -34,17 +34,18 @@ $ git checkout gh-pages
 </code></pre>
 
 {% highlight html %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    ...
-    <link rel="stylesheet" href="path/to/swiper.min.css">
-</head>
-<body>
-    ...
-    <script src="path/to/swiper.min.js"></script>
-</body>
-</html> 
+<div class="mod-tab" id="tab">
+    <div class="mod-tab__hd" data-js="nav">
+        <div class="mod-tab__hdItem act">01</div>
+        <div class="mod-tab__hdItem">02</div>
+        <div class="mod-tab__hdItem">03</div>
+    </div>
+    <div class="mod-tab__bd" data-js="content">
+        <div class="mod-tab__bdItem act">1</div>
+        <div class="mod-tab__bdItem">2</div>
+        <div class="mod-tab__bdItem">3</div>
+    </div>
+</div>
 {% endhighlight %}
 
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
