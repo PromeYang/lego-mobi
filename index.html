@@ -35,9 +35,10 @@ $ git checkout gh-pages
 
 {% highlight html %}
 <script>
-    seajs.use(['module/lego.tab'], function() {
-        LEGO.tab('#tab');
-    });
+seajs.use(['module/lego.popup'], function() {
+    var popup = LEGO.popup('#popup');
+    popup.show();
+});
 </script>
 {% endhighlight %}
 
