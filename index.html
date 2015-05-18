@@ -34,58 +34,13 @@ $ git checkout gh-pages
 </code></pre>
 
 {% highlight html %}
-<div class="logo-yybg">
-    <div class="logo-yy">
-        <div class="logo-yy__weiba is-animate">
-             <div class="logo-yy__weibaTiaowen"></div>
-             <div class="logo-yy__weibaModuan"></div>
-        </div>
-        <div class="logo-yy__hand is-left"></div>
-        <div class="logo-yy__hand is-right"></div>
-        <div class="logo-yy__body"></div>
-        <div class="logo-yy__bodyCt"></div>
-        <div class="logo-yy__bodyY">
-            <div class="logo-yy__bodyYa"></div>
-            <div class="logo-yy__bodyYb"></div>
-        </div>
-        <div class="logo-yy__bodyY is-animate">
-            <div class="logo-yy__bodyYa"></div>
-            <div class="logo-yy__bodyYb"></div>
-        </div>
-        <div class="logo-yy__bodyLine is-left"></div>
-        <div class="logo-yy__bodyLine is-right"></div>
-        <div class="logo-yy__foot is-left"></div>
-        <div class="logo-yy__foot is-right"></div>
-        <div class="logo-yy__footLine is-left"></div>
-        <div class="logo-yy__footLine is-right"></div>
-        <div class="logo-yy__footCt"></div>
-        <div class="logo-yy__head"></div>
-        <div class="logo-yy__chin"></div>
-        <div class="logo-yy__mouth"></div>
-        <div class="logo-yy__beard"></div>
-        <div class="logo-yy__nose"></div>
-        <div class="logo-yy__eye is-left">
-            <div class="logo-yy__eyeA"></div>
-            <div class="logo-yy__eyeB"></div>
-        </div>
-        <div class="logo-yy__eye is-right">
-            <div class="logo-yy__eyeA"></div>
-            <div class="logo-yy__eyeB"></div>
-        </div>
-        <div class="logo-yy__ear is-left"></div>
-        <div class="logo-yy__earLine is-left"></div>
-        <div class="logo-yy__earIn is-left"></div>
-        <div class="logo-yy__ear is-right"></div>
-        <div class="logo-yy__earLine is-right"></div>
-        <div class="logo-yy__earIn is-right"></div>
-        <div class="logo-yy__hair is-animate">
-            <div class="logo-yy__hairA"></div>
-            <div class="logo-yy__hairB"></div>
-            <div class="logo-yy__hairC"></div>
-            <div class="logo-yy__hairD"></div>
-        </div>
-    </div>
-</div>
+<script>
+var doms=$('#logo-yy').children().length;
+$('#logo-yy').children().each(function(){
+    doms+=$(this).children().length;
+})
+console.log('doms : '+doms);
+</script>
 {% endhighlight %}
 
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
