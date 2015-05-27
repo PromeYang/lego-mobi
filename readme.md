@@ -1,5 +1,15 @@
 # ui-slide
 
+{% highlight html %}
+<script>
+var doms=$('#logo-yy').children().length;
+$('#logo-yy').children().each(function(){
+doms+=$(this).children().length;
+})
+console.log('doms : '+doms); // --> doms : 42
+</script>
+{% endhighlight %}
+
 ---
 
 * *组件说明：* Slide图片轮播UI组件，请设置模块类名前缀 `classPrefix: null` 与 触发器被选中时的class `activeTriggerClass: 'is-active'`.
