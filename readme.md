@@ -1,3 +1,7 @@
+---
+layout: default
+title: Getting started &middot; Ratchet
+---
 # ui-slide
 
 {% highlight html %}
