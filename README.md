@@ -1,5 +1,5 @@
 
-```html
+````html
 <div class="ui-slide ext-dotted" data-role="slide-demo1">
     <ul class="ui-slide__content" data-switchable-role="content">
         <li class="ui-slide__panel">
@@ -18,4 +18,4 @@
         <li class="ui-slide__trigger">3</li>
     </ul>
 </div>
-```
+````
