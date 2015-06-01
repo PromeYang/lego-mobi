@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <meta name="apple-itunes-app" content="app-id=" />
+    <link rel="apple-touar-icon" sizes="114x114" href="" />
+    <title> 模板页 </title>
+    <!-- 自定义样式 start -->
+    <link href="css/index.css" rel="stylesheet">
+    <!-- 自定义样式 end -->
+</head>
+<body>
+
+    <!-- 列表样式一 start -->
+    <div class="ui-lego ui-list">
+        <div class="ui-list__header">列表样式 1</div>
+        <ul>
+            <li>
+                <a href="">item 1</a>
+            </li>
+            <li>
+                <a href="">item 2</a>
+            </li>
+            <li>
+                <a href="">item 3</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 列表样式1 end -->
+
+    <!-- 列表样式2 start -->
+    <div class="ui-lego ui-list">
+        <div class="ui-list__header">列表样式 2</div>
+        <ul>
+            <li class="ui-list__arrow">
+                <a href="">item 1</a>
+            </li>
+            <li class="ui-list__arrow">
+                <a href="">item 2</a>
+            </li>
+            <li class="ui-list__arrow">
+                <a href="">item 3</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 列表样式2 end -->
+
+    <!-- 列表样式3 start -->
+    <div class="ui-lego ui-list">
+        <div class="ui-list__header">列表样式 3</div>
+        <ul>
+            <li class="ui-list__shape">
+                <a href="">item 1<span class="_shape">2</span></a>
+            </li>
+            <li>
+                <a href="">item 2</a>
+            </li>
+            <li>
+                <a href="">item 3</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 列表样式3 end -->
+    
+   
+    <!-- legoMobi模块入口 start -->
+    <script src="http://assets.dwstatic.com/mobile/src/js/main/seajs/sea-lego.js"></script>
+    <!-- legoMobi模块入口 end -->
+</body>
+</html>

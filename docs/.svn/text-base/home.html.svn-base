@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>LEGO-Mobile</title>
+        <meta name="description" content="LEGO-Mobile 是 LEGO 移动前端开发框架，提供简单、快速的 Web 开发体验。">
+        <meta name="author" content="YY-UED PromeYang">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link type="image/x-icon" href="../static/css/favicon.ico" rel="icon">
+        <link rel="stylesheet" href="../static/css/normalize.css" />
+        <link rel="stylesheet" href="../static/css/site.css" />
+        <link rel="stylesheet" href="../static/css/solarized.css" />
+        <link rel="stylesheet" href="../static/css/home.css" />
+<style>
+/* alipay iconfont */
+@font-face {
+  font-family: "rei";
+  src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20130423"); /* IE9 */
+  src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20130423#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("https://i.alipayobjects.com/common/fonts/rei.woff?20130423") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+  url("https://i.alipayobjects.com/common/fonts/rei.ttf?20130423")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url("https://i.alipayobjects.com/common/fonts/rei.svg?20130423#rei") format("svg"); /* iOS 4.1- */
+}
+.iconfont {
+  font-family:"rei";
+  font-style: normal;
+  font-weight: normal;
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+}
+</style>
+        <!--[if lt IE 9]>
+        <script src="../static/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body class="alice">
+        <div id="header-wrapper">
+            <div class="top">
+                <div class="content">
+                    <a href="http://ued.yypm.com/" class="homeBtn">Back To LEGO</a>
+                    <a href="https://github.com/duowan/LegoUI-mobi.git" class="githubBtn" target="_blank">Github project</a>
+                </div>
+            </div>
+            
+            <div class="mainBody">
+                <div class="content">
+                    <h2 class="page-title">LEGO Mobile</h2>
+                    <p class="page-description">LEGO Mobile 是 LEGO 移动前端开发框架，提供简单、快速的 Web 开发体验。LEGO Mobile 是基于 zepto 和 seajs 的轻量级移动组件库，提供了一系列webapp的UI解决方案。支持 UC，QQ，Opera，Safari，Chrome 等国内主流手机浏览器。</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="body-wrapper">
+            <p style="padding-left:30px;font-size: 20px;">UI组件</p>
+            <div class="container ui-homeBd">
+                <ul class="ui-docList">
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/button.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">Button</p>
+                            <p class="ui-docItem__desc">按钮</p>
+                        </li>
+                    </a>
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/header.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">Header</p>
+                            <p class="ui-docItem__desc">头部</p>
+                        </li>
+                    </a>
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/list.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">List</p>
+                            <p class="ui-docItem__desc">列表</p>
+                        </li>
+                    </a>
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/form.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">Form &amp; From Element</p>
+                            <p class="ui-docItem__desc">表单 &amp; 表单元素</p>
+                        </li>
+                    </a>
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/window.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">Window</p>
+                            <p class="ui-docItem__desc">模态窗</p>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+
+            <p style="padding-left:30px;font-size: 20px;">交互组件</p>
+            <div class="container ui-homeBd">
+                <ul class="ui-docList">
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/tab.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">Tab</p>
+                            <p class="ui-docItem__desc">一个带过渡效果的Tab面板切换组件，支持手势滑动</p>
+                        </li>
+                    </a>
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/nav.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">Nav</p>
+                            <p class="ui-docItem__desc">一个可以横向滚动的导航条组件，支持缓动、循环、定位</p>
+                        </li>
+                    </a>
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/falls.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">Falls</p>
+                            <p class="ui-docItem__desc">一个两列瀑布流布局实现的组件，支持上拉加载更多，下拉刷新</p>
+                        </li>
+                    </a>
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/toast.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">Toast</p>
+                            <p class="ui-docItem__desc">一个集成了定制文字和图片的仿原生消息提示框组件</p>
+                        </li>
+                    </a>
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/popup.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">Popup</p>
+                            <p class="ui-docItem__desc">一个弹出层组件，可以定制内容及控制方式</p>
+                        </li>
+                    </a>
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/slidemenu.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">SlideMenu</p>
+                            <p class="ui-docItem__desc">一个抽屉式的侧边菜单栏，支持手势事件</p>
+                        </li>
+                    </a>
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/popupmenu.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">PopupMenu</p>
+                            <p class="ui-docItem__desc">一个仿ios原生弹出菜单组组件，可以定制内容及控制方式</p>
+                        </li>
+                    </a>
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/music.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">Music</p>
+                            <p class="ui-docItem__desc">一个支持背景音乐播放的组件，提供默认的控制按钮以及播放控制</p>
+                        </li>
+                    </a>
+                    <a href="http://ued.yypm.com/legomobi/3.0.0/src/docs/video.html">
+                        <li class="ui-docItem">
+                            <p class="ui-docItem__name">Video</p>
+                            <p class="ui-docItem__desc">一个快速插入视频的组件，通过视频区域控制控制的播放和暂停</p>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div id="footer-wrapper">
+            <footer>
+                <p class="powered">
+                    <a href="https://github.com/duowan/LegoUI-mobi">Lego Mobi</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>

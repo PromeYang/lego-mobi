@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <meta name="apple-itunes-app" content="app-id=" />
+    <link rel="apple-touar-icon" sizes="114x114" href="" />
+    <title> 模板页 </title>
+    <!-- 自定义样式 start -->
+    <link href="css/index.css" rel="stylesheet">
+    <!-- 自定义样式 end -->
+</head>
+<body>
+
+    <div class="ui-lego ui-form">
+        <div class="ui-form__header">表单样式 1</div>
+        <div class="ui-form__group">
+            <input type="text" placeholder="姓名">
+        </div>
+
+        <div class="ui-form__group">
+            <input type="password" placeholder="密码">
+        </div>
+
+        <div class="ui-form__group ui-form__space">
+            <input type="text" placeholder="邮箱地址">
+        </div>
+
+        <div class="ui-form__group">
+            <input type="text" placeholder="手机号">
+        </div>
+
+        <div class="ui-form__group">
+            <div class="ui-switch">
+                <input type="checkbox">
+                <div class="ui-switch__btn"></div>
+                <div class="ui-switch__lbl"></div>
+            </div>
+        </div>
+
+        <div class="ui-form__group">
+            <div class="ui-radio">
+                <input type="radio" name="sex" checked>
+                <div class="ui-radio__lbl">男</div>
+            </div>
+        </div>
+        <div class="ui-form__group">
+            <div class="ui-radio">
+                <input type="radio" name="sex">
+                <div class="ui-radio__lbl">女</div>
+            </div>
+        </div>
+
+        <div class="ui-form__group">
+            <div class="ui-checkbox">
+                <input type="checkbox" name="hobby" checked>
+                <div class="ui-checkbox__lbl">阅读</div>
+            </div>
+        </div>
+        <div class="ui-form__group">
+            <div class="ui-checkbox">
+                <input type="checkbox" name="hobby">
+                <div class="ui-checkbox__lbl">唱歌</div>
+            </div>
+        </div>
+        <div class="ui-form__group">
+            <div class="ui-checkbox">
+                <input type="checkbox" name="hobby">
+                <div class="ui-checkbox__lbl">跳舞</div>
+            </div>
+        </div>
+
+        <div class="ui-form__header">表单样式 2</div>
+        <div class="ui-form__group2">
+            <label>姓名</label>
+            <input type="text" placeholder="请输入">
+        </div>
+        <div class="ui-form__group2">
+            <label>密码</label>
+            <input type="text" placeholder="请输入">
+        </div>
+        <div class="ui-form__group2 ui-form__space">
+            <label>邮箱地址</label>
+            <input type="text" placeholder="请输入">
+        </div>
+        <div class="ui-form__group2">
+            <label>手机号</label>
+            <input type="text" placeholder="请输入">
+        </div>
+    </div>
+    
+   
+    <!-- legoMobi模块入口 start -->
+    <script src="http://assets.dwstatic.com/mobile/src/js/main/seajs/sea-lego.js"></script>
+    <!-- legoMobi模块入口 end -->
+</body>
+</html>
