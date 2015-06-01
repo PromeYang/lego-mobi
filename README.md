@@ -1,4 +1,4 @@
-# [LegoUI for Mobile](http://ued.yypm.com/legomobi/3.0.0/src/docs/home.html)
+# [LegoUI for Mobile](http://legomobi.sinaapp.com/docs/home.html)
 
 LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动端实际项目中较为通用常用的UI组件独立成库，Sass mixin的方式让使用者最大程度上灵活地描绘出自身理想的层叠样式。
 
@@ -16,7 +16,7 @@ LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动
 			@include ui-header();
 		}
 		
-4. 配合基础html结构，组件基础html结构各有不同，详见 [LegoUI for Mobile](http://ued.yypm.com/legomobi/3.0.0/src/docs/home.html)。如：
+4. 配合基础html结构，组件基础html结构各有不同，详见 [LegoUI for Mobile](http://legomobi.sinaapp.com/docs/home.html)。如：
 
 		<header class="ui-header">
 	        <div class="ui-header__left"></div>
@@ -36,4 +36,4 @@ LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动
 ---
 
 ###交互组件
-详见 [LegoUI for Mobile](http://ued.yypm.com/legomobi/3.0.0/src/docs/home.html)。
+详见 [LegoUI for Mobile](http://legomobi.sinaapp.com/docs/home.html)。
