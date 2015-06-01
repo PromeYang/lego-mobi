@@ -148,4 +148,4 @@ Default: `true`
 
 ## 查看Demo
 
-chrome模拟器查看 [Demo](http://ued.yypm.com/legomobi/3.0.0/src/demo/SlideMenu.html)
+chrome模拟器查看 [Demo](http://legomobi.sinaapp.com/demo/SlideMenu.html)

@@ -34,4 +34,4 @@ LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动
 
 ## 4.查看Demo
 
-chrome模拟器查看 [Demo](http://ued.yypm.com/legomobi/3.0.0/src/demo/Header.html)
+chrome模拟器查看 [Demo](http://legomobi.sinaapp.com/demo/Header.html)
