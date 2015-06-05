@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>LEGO-Mobile</title>
+        <meta name="description" content="LEGO-Mobile 是 LEGO 移动前端开发框架，提供简单、快速的 Web 开发体验。">
+        <meta name="author" content="YY-UED PromeYang">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link type="image/x-icon" href="./static/css/favicon.ico" rel="icon">
+        <link rel="stylesheet" href="./static/css/normalize.css" />
+        <link rel="stylesheet" href="./static/css/site.css" />
+        <link rel="stylesheet" href="./static/css/solarized.css" />
+<style>
+/* alipay iconfont */
+@font-face {
+  font-family: "rei";
+  src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20130423"); /* IE9 */
+  src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20130423#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("https://i.alipayobjects.com/common/fonts/rei.woff?20130423") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+  url("https://i.alipayobjects.com/common/fonts/rei.ttf?20130423")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url("https://i.alipayobjects.com/common/fonts/rei.svg?20130423#rei") format("svg"); /* iOS 4.1- */
+}
+.iconfont {
+  font-family:"rei";
+  font-style: normal;
+  font-weight: normal;
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+}
+</style>
+        <!--[if lt IE 9]>
+        <script src="./static/js/html5shiv.js"></script>
+        <![endif]-->
+        
+        <script src="http://assets.dwstatic.com/amkit/entry.js"></script>
+        <script src="./static/js/site.js"></script>
+    </head>
+    <body class="alice">
+        <div id="header-wrapper">
+            <div class="top">
+                <div class="content">
+                    <a href="index.html" class="homeBtn">Back To Home</a>
+                    <a href="https://github.com/duowan/LegoUI-mobi.git" class="githubBtn" target="_blank">Github project</a>
+                </div>
+            </div>
+            
+            <div class="mainBody">
+                <div class="content">
+                    <h2 class="page-title">&nbsp;</h2>
+                    <p class="page-description">&nbsp;</p>
+                </div>
+                <div id="qrcode-container">
+                    <!-- qrcode -->
+                </div>
+            </div>
+
+        </div>
+
+        <div id="nav-wrapper">
+            <span>快速导航：</span>
+            <a href="button.html">Button</a>
+            <a href="falls.html">Falls</a>
+            <a href="form.html">Form</a>
+            <a href="header.html">Header</a>
+            <a href="list.html">List</a>
+            <a href="music.html">Music</a>
+            <a href="nav.html">Nav</a>
+            <a href="popup.html">Popup</a>
+            <a href="popupmenu.html">PopupMenu</a>
+            <a href="slidemenu.html">SlideMenu</a>
+            <a href="tab.html">Tab</a>
+            <a href="toast.html">Toast</a>
+            <a href="video.html">Video</a>
+            <a href="window.html">Window</a>
+        </div>
+
+        <div id="body-wrapper">
+            <aside id="sidebar-wrapper">
+                <div class="device">
+                    <iframe src="" frameborder="0" id="demoPage"></iframe>
+                </div>
+            </aside>
+            <div id="content-wrapper">
+                <div id="content">
+<article class="hentry">
+  <h1 class="entry-title">头部mixin</h1>
+  <div class="entry-content">
+    <h2 id="1-说明">1.说明<a href="#1-说明" class="anchor">¶</a></h2><p>LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动端实际项目中较为通用常用的UI组件独立成库，Sass mixin的方式让使用者最大程度上灵活地描绘出自身理想的层叠样式。</p>
+<h2 id="2-使用步骤">2.使用步骤<a href="#2-使用步骤" class="anchor">¶</a></h2><ol>
+<li>在需要使用UI库的sass文件中，导入本库sass文件。如：<code>@import &quot;lego&quot;;</code></li>
+<li>在需要使用组件的样式中，导入组件mixin。如：<div class="highlight"><pre><code class="scss"><span class="class">.ui-header</span>{
+    <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> ui-header</span>();</span>
+}</code></pre></div></li>
+<li>html中使用，如：<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">header</span> <span class="attribute">class</span>=<span class="value">"ui-lego ui-header"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-header__left"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    头部样式
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-header__right"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">header</span>&gt;</span></code></pre></div></li>
+</ol>
+<h2 id="3-参数说明">3.参数说明<a href="#3-参数说明" class="anchor">¶</a></h2><ul>
+<li>宽度        <code>$width: 100%</code></li>
+<li>高度        <code>$height: 50px</code>                    </li>
+<li>背景色      <code>$bgColor: #fff</code>                </li>
+<li>字体色      <code>$fontColor: #ec185b</code>        </li>
+<li>字体大小    <code>$fontSize: 20px</code>            </li>
+<li>定位       <code>$position: relative</code>            </li>
+<li>底边框     <code>$bdbottom: solid 1px #ddd</code>        </li>
+<li>右边图标     <code>$rightIcon:(图片地址/64位图)</code>                        </li>
+</ul>
+<h2 id="4-查看demo">4.查看Demo<a href="#4-查看demo" class="anchor">¶</a></h2><p>chrome模拟器查看 <a href="http://ued.yypm.com/legomobi/3.0.0/src/demo/Header.html">Demo</a></p>
+
+  </div>
+</article>
+</div>
+            </div>
+            
+        </div>
+        <div id="footer-wrapper">
+            <footer>
+                <p class="powered"><a href="https://github.com/duowan/LegoUI-mobi">Lego Mobi</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+    <script src="./static/js/jquery.min.js"></script>
+    <script src="./static/js/jquery.qrcode-0.11.0.min.js"></script>
+    <script>
+    $(function(){
+
+        var header=document.getElementById('header-wrapper');
+        var nav=document.getElementById('nav-wrapper');
+        var sidebar=document.getElementById('sidebar-wrapper');
+        document.onscroll=function(){
+            if(document.body.scrollTop>=header.clientHeight+nav.clientHeight){
+                if(sidebar.style.position!='fixed') sidebar.style.position='fixed';
+            }else{
+                if(sidebar.style.position!='absolute') sidebar.style.position='absolute';
+            }
+        }
+
+        document.title+=' - '+$('#content .entry-title').html();
+        $('.page-title').html($('#content .entry-title').html());
+        $('.page-description').html($('#content .entry-content').find('p').eq(0).html());
+        // $('.page-description').html($('#content .entry-content').find('strong').eq(0).html());
+
+        $('#content .entry-content p').find('a').each(function(){
+            if($(this).html()=='Demo'){
+                $('#qrcode-container').qrcode({
+                    "size": 150,
+                    "color": "#3a3",
+                    "background": "#fff",
+                    "quiet": 1,
+                    "text": $(this).attr('href')
+                });
+                $('#demoPage').attr('src',$(this).attr('href'));
+            }
+        })
+
+    });
+    </script>
+</html>
