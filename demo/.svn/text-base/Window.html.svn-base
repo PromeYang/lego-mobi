@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <meta name="apple-itunes-app" content="app-id=" />
+    <link rel="apple-touar-icon" sizes="114x114" href="" />
+    <title> 模板页 </title>
+    <!-- 自定义样式 start -->
+    <link href="css/index.css" rel="stylesheet">
+    <!-- 自定义样式 end -->
+</head>
+<body>
+
+    <div class="ui-lego ui-window">
+        <div class="ui-window__middle">
+            <div class="ui-window__main">
+                <div class="ui-window__header">标题</div>
+                <div class="ui-window__content">内容</div>
+                <div class="ui-window__footer">
+                    <a href="#"><div class="ui-window__btn">取消</div></a>
+                    <a href="#"><div class="ui-window__btn">确定</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- legoMobi模块入口 start -->
+    <script src="http://assets.dwstatic.com/mobile/src/js/main/seajs/sea-lego.js"></script>
+    <!-- legoMobi模块入口 end -->
+</body>
+</html>

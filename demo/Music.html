@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title> Music </title>
+    <link href="../css/global.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mod.music.css">
+    <!-- <link rel="stylesheet" href="http://ued.yypm.com/legomobi/3.0.0/src/css/mod.slideMenu.css"> -->
+</head>
+<body>
+
+    <div style="text-align:center;">
+        <p>1.可以通过点击音乐图标控制音乐的播放和暂停</p>
+        <p>2.可以自定义音乐图标的显示位置</p>
+        <p>3.提供播放和暂停的方法</p>
+    </div>
+
+    <script src="http://assets.dwstatic.com/mobile/src/js/main/seajs/sea-lego.js" id="seajsnode"></script>
+    <script>
+
+    seajs.use(['../js/music'], function(Music) {
+        var music = new Music({
+            size: 36,
+            left: 12,
+            top: 12,
+            right: null,
+            bottom: null,
+            preload: true,
+            autoplay: true,
+            loop: true,
+            source:[
+                'http://osvaldas.info/examples/audio-player-responsive-and-touch-friendly/audio.mp3'
+            ]
+        });
+        
+    });
+
+    // 或者
+
+    // var Tab = require('modulePath/lego.tab');
+    // var tab = new Tab('#tab');
+
+    </script>
+
+</body>
+</html>

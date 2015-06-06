@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title> Tab </title>
+    <link href="../css/global.css" rel="stylesheet">
+    <link href="../css/mod.tab.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="mod-tab" id="tab">
+        <div class="mod-tab__hd" data-js="nav">
+            <div class="mod-tab__hdItem act">01</div>
+            <div class="mod-tab__hdItem">02</div>
+            <div class="mod-tab__hdItem">03</div>
+        </div>
+        <div class="mod-tab__bd" data-js="content">
+            <div class="mod-tab__bdItem act">1</div>
+            <div class="mod-tab__bdItem">2</div>
+            <div class="mod-tab__bdItem">3</div>
+        </div>
+    </div>
+
+    <script src="http://assets.dwstatic.com/mobile/src/js/main/seajs/sea-lego.js" id="seajsnode"></script>
+    <script>
+    // seajs.use(['modulePath/lego.tab'], function() {
+    //     LEGO.tab('#tab');
+    // });
+
+    seajs.use(['../js/tab'], function(Tab) {
+        var tab = new Tab('#tab');
+    });
+
+    // 或者
+
+    // var Tab = require('modulePath/lego.tab');
+    // var tab = new Tab('#tab');
+
+    </script>
+
+</body>
+</html>

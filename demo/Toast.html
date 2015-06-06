@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title> Toast </title>
+    <link href="../css/global.css" rel="stylesheet">
+    <link href="../css/mod.toast.css" rel="stylesheet">
+</head>
+<body>
+
+    
+    <div id="btn" style="text-align:center;padding-top:50px;">
+        <span style="display:inline-block; padding:20px; border: 1px solid #000; border-radius:10px;">默认toast</span>
+    </div>
+
+    <div id="btn2" style="text-align:center;padding-top:50px;">
+        <span style="display:inline-block; padding:20px; border: 1px solid #000; border-radius:10px;">带图文的toast</span>
+    </div>
+
+    <div id="btn3" style="text-align:center;padding-top:50px;">
+        <span style="display:inline-block; padding:20px; border: 1px solid #000; border-radius:10px;">定制的toast</span>
+    </div>
+
+    <script src="http://assets.dwstatic.com/mobile/src/js/main/seajs/sea-lego.js" id="seajsnode"></script>
+    <script>
+    seajs.use(['../js/toast'], function(Toast) {
+        
+        var toast=new Toast({
+            msg:'aaa',
+            bottom:150,
+            img:'http://art.yypm.com/300x150',
+            skin:'abc',
+            duration:'0.5s',
+            container:'#btn'
+        });
+
+        var toast2=new Toast({
+            msg:'aaa',
+            duration:'2.5s',
+            container:'#btn'
+        });
+
+        $('#btn').on('click',function(){
+            new Toast();
+        });
+
+        $('#btn2').on('click',function(){
+            new Toast({
+                msg:'aaa',
+                bottom:150,
+                img:'http://art.yypm.com/300x150',
+                skin:'abc',
+                duration:'0.5s',
+                container:'#btn'
+            });
+        });
+
+        $('#btn3').on('click',function(){
+            new Toast({
+                msg:'aaa',
+                duration:'2.5s',
+                container:'#btn'
+            });
+        });
+
+    });
+    </script>
+
+</body>
+</html>

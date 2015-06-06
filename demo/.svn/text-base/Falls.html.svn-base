@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title> Falls </title>
+    <link href="../css/global.css" rel="stylesheet">
+    <link href="../css/mod.falls.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="mod-falls" id="falls">
+        <div class="mod-falls__main">
+            <div class="mod-falls__bd">
+                <ul class="mod-falls__col" data-js="col">
+                    <a href="#">
+                        <li class="mod-falls__item">
+                            <div class="custom">
+                                <img src="http://art.yypm.com/200x150">
+                            </div>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="mod-falls__item">
+                            <div class="custom">
+                                <img src="http://art.yypm.com/200x220">
+                            </div>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="mod-falls__item">
+                            <div class="custom">
+                                <img src="http://art.yypm.com/200x150">
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+                <ul class="mod-falls__col" data-js="col">
+                    <a href="#">
+                        <li class="mod-falls__item">
+                            <div class="custom">
+                                <img src="http://art.yypm.com/200x180">
+                            </div>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="mod-falls__item">
+                            <div class="custom">
+                                <img src="http://art.yypm.com/200x160">
+                            </div>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="mod-falls__item">
+                            <div class="custom">
+                                <img src="http://art.yypm.com/200x150">
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="mod-falls__ft">
+                <div class="mod-falls__loadTip" data-js="tip"></div>
+                <div class="mod-falls__loading" data-js="loading"></div>
+            </div>
+        </div>
+            
+    </div>
+
+    <script src="http://assets.dwstatic.com/mobile/src/js/main/seajs/sea-lego.js" id="seajsnode"></script>
+    <script>
+    seajs.use(['../js/falls'], function(Falls) {
+        var falls = new Falls('#falls',{
+            top: 0,
+            bottom:200
+        });
+    });
+    </script>
+
+</body>
+</html>
