@@ -1,39 +1,361 @@
-# [LegoUI for Mobile](http://legomobi.sinaapp.com/docs/home.html)
+# [LegoUI for Mobile](http://promeyang.github.io/lego-mobi/index.html)
 
 LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动端实际项目中较为通用常用的UI组件独立成库，Sass mixin的方式让使用者最大程度上灵活地描绘出自身理想的层叠样式。
 
----
+## 开始之前
 
-###使用步骤
+[Sass](https://github.com/sass/sass) 是一种CSS的开发工具，增加了规则、变量、混入、选择器、继承等等特性。
 
-1. 基于Lego Mobile基础样式。如果正在使用我们的前端工作流Gulp构建工具 [Generator Lego](https://github.com/duowan/generator-lego)，初始化时选择 `yo lego` mobi分支，则默认已有该基础样式，无需重复导入本库中_base.scss简化基础样式。如果没有使用我们Gulp构建工具，则需导入本库中_base.scss简化基础样式。
+[SeaJS](https://github.com/seajs/seajs) 是一个遵循CommonJS规范的JavaScript模块加载框架。
 
-2. 在需要使用UI库的sass文件中，导入本库sass文件。如：`@import "lego";`
+项目基于 `seajs` 和 `zepto` 进行开发，采用 `sass` 编译环境
 
-3. 在需要使用组件的样式中，导入组件mixin。如：
-	
-		.ui-header{
-			@include ui-header();
-		}
-		
-4. 配合基础html结构，组件基础html结构各有不同，详见 [LegoUI for Mobile](http://legomobi.sinaapp.com/docs/home.html)。如：
+## 快速开始
 
-		<header class="ui-header">
-	        <div class="ui-header__left"></div>
-	        头部样式
-	        <div class="ui-header__right"></div>
-	    </header>
-	    
----
+### 1.引入scss
 
-###UI组件列表
-* 头部
-* 列表
-* 表单及表单组件（开关，单选，多选等）
-* 按钮
-* 提示框
+假设你已经安装了sass编译环境，可以通过 [LegoUI-mobi Github](https://github.com/duowan/LegoUI-mobi) 克隆一份`_lego.scss` 文件到你的sass目录下然后用引入该scss，这时候你就可以按需要的使用 每个模块组件的 mixin 例如： `@include mod-popup;`
 
----
+```scss
+// 引入LegoUI-mobi
+@import 'lego';
+// 引用导航组件mixin
+@include mod-popup;
+```
+**友情提示：如果你还没安装sass，[这里走起](https://github.com/sass/sass)**
 
-###交互组件
-详见 [LegoUI for Mobile](http://legomobi.sinaapp.com/docs/home.html)。
+### 2.使用seajs
+
+组件依赖 `seajs` , 调用组件前必须引入 `sea-lego.js` 文件
+
+```html
+<body>
+    ...
+    <script src="http://assets.dwstatic.com/mobile/src/js/main/seajs/sea-lego.js" id="seajsnode"></script>
+</body>
+```
+
+如果你已经在项目中使用了seajs，你可以直接extand一份config配置来使用
+
+```javascript
+seajs.config({
+    paths: {
+        'legoPath': 'http://assets.dwstatic.com/mobile/src/js/',
+        'modulePath': 'http://assets.dwstatic.com/legomobi/3.0.0/js/'
+    },
+    alias: {
+        'zepto': 'legoPath/main/zepto/zepto.min.js',
+        'touch': 'legoPath/main/zepto/zepto.touch.js',
+        'iscroll': 'legoPath/module/iscroll/iscroll.js'
+    }
+});
+```
+
+**注意： `paths` 的配置是依赖必须的， `alias` 中的配置项如果你在项目中已有使用，你可以选择使用自己项目的路径或者使用CDN上的路径**
+
+调用方式1：你可以直接在页面中通过 `seajs.use()` 来调用某个组件，例如：
+
+```html
+<script>
+    seajs.use(['module/popup'], function(Popup) {
+        var popup = new Popup('#popup',{
+            hasBg: true,
+            hasBgEvent: true,
+            hasSelfEvent: true
+        });
+    });
+</script>
+```
+
+调用方式2：也可以在自定义的模块中通过 `require` 来调用，例如：
+
+```javascript
+define(function(require, exports, module) {
+	var Popup = require('modulePath/popup');
+	var popup = new Popup('#popup',{
+        hasBg: true,
+        hasBgEvent: true,
+        hasSelfEvent: true
+    });
+});
+```
+
+## 说明文档
+
+低调、绝不华丽的文档展示，[这里走起](http://promeyang.github.io/lego-mobi/index.html)
+
+## 交互组件
+
+### [1.Tab](http://promeyang.github.io/lego-mobi/tab.html)
+
+带过渡效果的Tab面板切换组件，支持手势滑动，[详情走起](http://promeyang.github.io/lego-mobi/tab.html)
+
+### [2.Nav](http://promeyang.github.io/lego-mobi/nav.html)
+
+可以横向滚动的导航条组件，支持缓动、循环、定位，[详情走起](http://promeyang.github.io/lego-mobi/nav.html)
+
+### [3.Falls](http://promeyang.github.io/lego-mobi/falls.html)
+
+两列瀑布流布局实现的组件，支持上拉加载更多，下拉刷新，[详情走起](http://promeyang.github.io/lego-mobi/falls.html)
+
+### [4.Toast](http://promeyang.github.io/lego-mobi/toast.html)
+
+集成了定制文字和图片的仿原生消息提示框组件，[详情走起](http://promeyang.github.io/lego-mobi/toast.html)
+
+### [5.Popup](http://promeyang.github.io/lego-mobi/popup.html)
+
+弹出层组件，可以定制内容及控制方式，[详情走起](http://promeyang.github.io/lego-mobi/popup.html)
+
+### [6.SlideMenu](http://promeyang.github.io/lego-mobi/slidemenu.html)
+
+抽屉式的侧边菜单栏，支持手势事件，[详情走起](http://promeyang.github.io/lego-mobi/slidemenu.html)
+
+### [7.PopupMenu](http://promeyang.github.io/lego-mobi/popupmenu.html)
+
+仿ios原生弹出菜单组组件，可以定制内容及控制方式，[详情走起](http://promeyang.github.io/lego-mobi/popupmenu.html)
+
+### [8.Music](http://promeyang.github.io/lego-mobi/music.html)
+
+支持背景音乐播放的组件，提供默认的控制按钮以及播放控制，[详情走起](http://promeyang.github.io/lego-mobi/music.html)
+
+### [9.Video](http://promeyang.github.io/lego-mobi/video.html)
+
+快速插入视频的组件，通过视频区域控制控制的播放和暂停，[详情走起](http://promeyang.github.io/lego-mobi/video.html)
+
+## UI组件
+
+### [1.按钮](http://promeyang.github.io/lego-mobi/button.html)
+
+在需要使用组件的样式中，导入组件mixin。如：
+
+```scss
+.ui-btn{
+	@include ui-btn();
+}
+```
+
+html中使用，如：
+
+```html
+<a class="ui-lego ui-btn">按钮样式</a>
+```
+
+### [2.头部](http://promeyang.github.io/lego-mobi/header.html)
+
+在需要使用组件的样式中，导入组件mixin。如：
+
+```scss
+.ui-header{
+	@include ui-header();
+}
+```
+
+html中使用，如：
+
+```html
+<header class="ui-lego ui-header">
+    <div class="ui-header__left"></div>
+    头部样式
+    <div class="ui-header__right"></div>
+</header>
+```
+
+### [3.列表](http://promeyang.github.io/lego-mobi/list.html)
+
+在需要使用组件的样式中，导入组件mixin。如
+
+```scss
+.ui-list{
+	@include ui-list();
+}
+```	
+
+html中使用，如：
+
+```html
+<div class="ui-lego ui-list">
+    <div class="ui-list__header">列表样式 1</div>
+    <ul>
+        <li>
+            <a href="">item 1</a>
+        </li>
+        <li>
+            <a href="">item 2</a>
+        </li>
+        <li>
+            <a href="">item 3</a>
+        </li>
+    </ul>
+</div>
+
+<div class="ui-lego ui-list">
+    <div class="ui-list__header">列表样式 2</div>
+    <ul>
+        <li class="ui-list__arrow">
+            <a href="">item 1</a>
+        </li>
+        <li class="ui-list__arrow">
+            <a href="">item 2</a>
+        </li>
+        <li class="ui-list__arrow">
+            <a href="">item 3</a>
+        </li>
+    </ul>
+</div>
+
+<div class="ui-lego ui-list">
+    <div class="ui-list__header">列表样式 3</div>
+    <ul>
+        <li class="ui-list__shape">
+            <a href="">item 1<span class="_shape">2</span></a>
+        </li>
+        <li>
+            <a href="">item 2</a>
+        </li>
+        <li>
+            <a href="">item 3</a>
+        </li>
+    </ul>
+</div>
+```
+
+### [4.表单及表单组件（开关，单选，多选等）](http://promeyang.github.io/lego-mobi/form.html)
+
+在需要使用组件的样式中，导入组件mixin。如
+
+```scss	
+/* 表单 */
+.ui-form{
+	@include ui-form();
+}
+
+/* 开关 */
+.ui-switch{
+	@include ui-switch();
+}
+
+/* 单选 */
+.ui-radio{
+	@include ui-radio();
+}
+
+/* 复选 */
+.ui-checkbox{
+	@include ui-checkbox();
+}
+```	
+
+html中使用，如：
+
+```html
+<div class="ui-lego ui-form">
+
+    <div class="ui-form__header">表单样式 1</div>
+    
+    <div class="ui-form__group">
+        <input type="text" placeholder="姓名">
+    </div>
+
+    <div class="ui-form__group">
+        <input type="password" placeholder="密码">
+    </div>
+
+    <div class="ui-form__group ui-form__space">
+        <input type="text" placeholder="邮箱地址">
+    </div>
+
+    <div class="ui-form__group">
+        <input type="text" placeholder="手机号">
+    </div>
+
+    <div class="ui-form__group">
+        <div class="ui-switch">
+            <input type="checkbox">
+            <div class="ui-switch__btn"></div>
+            <div class="ui-switch__lbl"></div>
+        </div>
+    </div>
+
+    <div class="ui-form__group">
+        <div class="ui-radio">
+            <input type="radio" name="sex" checked>
+            <div class="ui-radio__lbl">男</div>
+        </div>
+    </div>
+    <div class="ui-form__group">
+        <div class="ui-radio">
+            <input type="radio" name="sex">
+            <div class="ui-radio__lbl">女</div>
+        </div>
+    </div>
+
+    <div class="ui-form__group">
+        <div class="ui-checkbox">
+            <input type="checkbox" name="hobby" checked>
+            <div class="ui-checkbox__lbl">阅读</div>
+        </div>
+    </div>
+    <div class="ui-form__group">
+        <div class="ui-checkbox">
+            <input type="checkbox" name="hobby">
+            <div class="ui-checkbox__lbl">唱歌</div>
+        </div>
+    </div>
+    <div class="ui-form__group">
+        <div class="ui-checkbox">
+            <input type="checkbox" name="hobby">
+            <div class="ui-checkbox__lbl">跳舞</div>
+        </div>
+    </div>
+
+    <div class="ui-form__header">表单样式 2</div>
+    <div class="ui-form__group2">
+        <label>姓名</label>
+        <input type="text" placeholder="请输入">
+    </div>
+    <div class="ui-form__group2">
+        <label>密码</label>
+        <input type="text" placeholder="请输入">
+    </div>
+    <div class="ui-form__group2 ui-form__space">
+        <label>邮箱地址</label>
+        <input type="text" placeholder="请输入">
+    </div>
+    <div class="ui-form__group2">
+        <label>手机号</label>
+        <input type="text" placeholder="请输入">
+    </div>
+</div>			
+```
+
+### [5.模态窗](http://promeyang.github.io/lego-mobi/window.html)
+
+在需要使用组件的样式中，导入组件mixin。如：
+
+```scss	
+.ui-window{
+	@include ui-window();
+}
+```	
+
+html中使用，如：
+
+```html
+<div class="ui-lego ui-window">
+    <div class="ui-window__middle">
+        <div class="ui-window">
+            <div class="ui-window__header">标题</div>
+            <div class="ui-window__content">内容</div>
+            <div class="ui-window__footer">
+                <a href="#"><div class="ui-window__btn">取消</div></a>
+                <a href="#"><div class="ui-window__btn">确定</div></a>
+            </div>
+        </div>
+    </div>
+</div>
+```	
+
+## 更新说明
+
+* 1.0 基础版本
+* 1.1 加入.ui-lego命名空间，直接使用无需引入_base.scss基础样式文件
