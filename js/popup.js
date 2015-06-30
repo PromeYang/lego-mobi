@@ -1,3 +1,9 @@
+/*
+ * @file: 弹出层组件
+ * @update: 2015-06-30 09:52:32
+ */
+
+
 define(function(require, exports, module) {
     
     var Widget= require('modulePath/widget');
@@ -54,7 +60,6 @@ define(function(require, exports, module) {
     });
     Popup.prototype.constructor = Popup;
 
-    // LEGO.popup=function(elem,opts){ return new Popup(elem,opts) };
     return Popup
 
 });

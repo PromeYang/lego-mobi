@@ -1,3 +1,8 @@
+/*
+ * @file: 视频播放组件
+ * @update: 2015-06-30 10:21:42
+ */
+
 define(function(require, exports, module) {
     
     var Widget= require('modulePath/widget');

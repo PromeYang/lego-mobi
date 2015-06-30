@@ -1,3 +1,8 @@
+/*
+ * @file: 两列瀑布流布局实现的组件
+ * @update: 2015-06-30 10:19:51
+ */
+
 define(function(require, exports, module) {
     
     var Widget= require('modulePath/widget');

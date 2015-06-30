@@ -1,30 +1,36 @@
+/*
+ * @file: 仿ios原生弹出菜单组组件
+ * @update: 2015-06-30 10:15:56
+ */
+
 define(function(require, exports, module) {
-    
+    // 引入基类
     var Widget= require('modulePath/widget');
 
     function PopupMenu(elem,opts){
         this.$mod=$(elem);
         this.elem=elem;
-
+        // 初始配置
         this._opts={
-            itemList: ['菜单1','菜单2','菜单3'],
-            trigger: 'tap',
-            height: 40,
-            fontSize: 14,
-            padding: 15,
-            bgColor: '#000',
-            borderColor: '#fff',
-            itemEvent: function(index){
+            itemList: ['菜单1','菜单2','菜单3'],      // 菜单项
+            trigger: 'tap',                        // 触发事件类型
+            height: 40,                            // 菜单高度
+            fontSize: 14,                          // 菜单字体大小
+            padding: 15,                           // 菜单内边距
+            bgColor: '#000',                       // 菜单背景颜色
+            borderColor: '#fff',                   // 菜单边框颜色
+            itemEvent: function(index){            // 触发回调事件
                 // if(i==0) do something;
                 // else if(i==2) do something;
             }
         };
-
+        // 扩展自定义配置
         this._opts=$.extend({},this._opts,opts);
-
+        // 初始化入口
         this._init(elem);
     }
     PopupMenu.prototype=$.extend({},Widget,{
+        // 添加dom节点
         renderDOM:function(){
             var itemList='';
             $.each(this._opts.itemList,function(i,val){
@@ -38,6 +44,7 @@ define(function(require, exports, module) {
             
             this.mod=$(popupMenuStr);
         },
+        // 监听事件
         bindEvent:function(){
             var self=this;
             $(document.body).on('touchstart click',function(e){
@@ -55,6 +62,7 @@ define(function(require, exports, module) {
                 if(!self._isShow) self.mod.css({'display':'none'});
             });
         },
+        // 重写样式
         resetCSS:function(){
             var modPosition=this.$mod[0].style.position;
             var modOffset=this.$mod.offset();
@@ -96,6 +104,7 @@ define(function(require, exports, module) {
             });
             $('<style>'+this.elem+' .mod-popupMenu::before{border-color: transparent transparent '+this._opts.bgColor+' transparent; left:'+beforeLeft+'px;}</style>').appendTo('head');
         },
+        // 显示组件
         show:function(){
             var self=this;
             self.mod.css('display','inline-block');
@@ -105,6 +114,7 @@ define(function(require, exports, module) {
             self._isShow=true;
             return this
         },
+        // 隐藏组件
         hide:function(){
             this.mod.css('opacity',0);
             this._isShow=false;
@@ -113,7 +123,6 @@ define(function(require, exports, module) {
     });
     PopupMenu.prototype.constructor = PopupMenu;
 
-    // LEGO.popupMenu=function(elem,opts){ return new popupMenu(elem,opts) };
     return PopupMenu
 
 });

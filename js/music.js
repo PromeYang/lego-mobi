@@ -1,3 +1,8 @@
+/*
+ * @file: 背景音乐组件
+ * @update: 2015-06-30 10:20:20
+ */
+
 define(function(require, exports, module) {
     
     var Widget= require('modulePath/widget');

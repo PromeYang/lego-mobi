@@ -1,8 +1,14 @@
+/*
+ * @file: 组件基类
+ * @update: 2015-06-30 09:52:32
+ */
+
 define(function(require, exports, module) {
     // 所有组件的基类，依赖seajs-lego
     require('zepto'),require('touch');
 
     function Widget(){
+        // 组件主体
         this.mod=null;
     }
     Widget.prototype={

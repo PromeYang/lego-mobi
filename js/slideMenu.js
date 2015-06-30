@@ -1,3 +1,8 @@
+/*
+ * @file: 侧边菜单栏组件
+ * @update: 2015-06-30 10:21:20
+ */
+
 define(function(require, exports, module) {
     
     var Widget= require('modulePath/widget');

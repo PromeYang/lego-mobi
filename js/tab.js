@@ -1,5 +1,10 @@
+/*
+ * @file: 面板切换组件
+ * @update: 2015-06-30 09:57:48
+ */
+
 define(function(require, exports, module) {
-    
+    // 引入基类
     var Widget= require('modulePath/widget');
 
     function Tab(elem,opts){
